@@ -1,0 +1,260 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    --main-color: #283526;
+    --primary-color: #888888;
+    --button-background: #4b709e;
+    --primary-button-background:#fe7649;
+    --background-color:#e2efff;
+}
+html{
+    font-size: 100%;
+}
+h1,h2{
+font-family: Avenir LT Std;
+color: var(--main-color);
+
+}
+h3,h4{
+    font-family: "muli";
+    color: var(--main-color);
+
+}
+h3{
+    font-weight: 750;
+    font-size: 2.2rem;
+    line-height: 6rem;
+    text-transform: capitalize;
+}
+a, p,li,button{
+    font-family: "muli";
+    color: var(--primary-color);
+
+}
+p{
+    font-size: 1.1rem;
+    line-height: 150%;
+    padding: .3rem 0;
+    font-style: normal;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    // cursor: pointer;
+
+
+}
+button{
+    padding: .7rem 1rem;
+    border-radius: 0.6rem;
+    border: none;
+    outline: none;
+    line-height: 1.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family:Avenir LT Std;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8rem;
+    background-color: var(--button-background);
+
+
+}
+header{
+    padding: 0 2rem;
+}
+//-----------------left-side-menu scss---------------------
+.left-side-menu{
+    width: 35%;
+      float: left;
+      padding: .7rem;
+      h1{
+        float: left;
+        font-size: 2rem;
+      }
+      img{
+        width: 10%;
+      }
+}
+//----------------right-side-menu scss----------------------
+.right-side-menu{
+    width: 65%;
+    display: flex;
+    float: right;
+
+    a{
+        margin-left: 3rem;
+        margin-top: .8rem;
+
+        li{
+        font-weight: 900;
+        box-sizing: border-box;
+        transition: all 0.2s;
+         }
+        :hover{
+        color: var(--button-background);
+         }
+    }
+}
+//----------------our Hero section scss----------------------
+.hero-section{
+    width: 100%;
+    height: 37rem;
+    background-image: url(images/doctorbanner.jpg);
+    background-repeat: no-repeat;
+    // background-size: cover;
+
+
+
+.left-side-hero-section{
+    position: absolute;
+    margin-top: 9.5rem;
+    width: 40%;
+    padding: 2rem 2rem;
+    margin-left: 9rem;
+    background-color: #146fdf3b;
+    left: -50rem;
+    transition: all 0.4s;
+    
+    .text-group{
+    margin: 1.5rem 0;
+    position: relative;
+
+
+
+    p{
+        font-size: 1.1rem;
+    }
+ }
+ .button-group{
+    position: relative;
+ 
+
+     :hover{
+          color: var(--button-background);
+          background-color: var(--primary-color);
+          scale: 1.04;
+       }
+    }
+  
+}
+
+
+}
+.hero-section:hover .left-side-hero-section{
+    left: 2rem;
+ }
+
+//  ------------------------------first mid section scss---------------------------
+ .mid-section-first{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  .mid-section-first-left{
+    //  width: 33%;
+     img{
+        width: 100%;
+        height: 40rem;
+     }
+  }
+  .mid-section-first-middle{
+    // width: 33%;
+    padding: 0 2rem;
+    margin-top: 11rem;
+    p{
+        padding: 1rem 0;
+    }
+    img{
+        padding-top: .4rem;
+    }
+
+  }
+  .mid-section-first-right{
+    // width: 34%;
+    margin-top: 6rem;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem 0;
+        padding: .3rem 0;
+        border-radius: .2rem;
+        line-height: 3.6rem;
+        background-color: blue;
+        i{
+            font-size: 1.5rem;
+        }
+        h1{
+            color: white;
+            font-size: 1.3rem;
+        }
+    }
+  }
+
+}
+
+// -- --------------------------------second mid  section start scss-----------------------------
+
+
+.second-mid-sec-firstpart{
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+    background-color: var(--background-color);
+
+  
+    p{
+        color: blue;
+        font-size: 1.6rem;
+    }
+    h1{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+}
+
+.second-mid-sec-secondpart{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 4rem; ;
+    background-color: var(--background-color);
+    .mid-second-fea1 , .mid-second-fea2 , .mid-second-fea3, .mid-second-fea4{
+        text-align: center;
+        padding: 2rem 1.5rem;
+        // transition: all 0.1s linear;
+        
+        margin-bottom: 2rem;
+        
+        border-radius: 1rem;
+      
+           h2{
+            padding: .5rem 0;
+           }
+           p{
+            padding-bottom: .4rem;
+           }
+         img{
+            transition: all 0.3s;
+           
+         } :hover{
+            transform: rotate(360deg);
+         }
+
+    }
+   
+    .mid-second-fea1:hover , .mid-second-fea2:hover , .mid-second-fea3:hover, .mid-second-fea4:hover{
+        background: #fff;
+        box-shadow: 0rem 0.4rem 2rem rgba(35,52,53,0.25);
+    }
+} 

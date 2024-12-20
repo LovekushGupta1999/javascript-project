@@ -1,0 +1,230 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  --main-color: #283526;
+  --primary-color: #888888;
+  --button-background: #4b709e;
+  --primary-button-background:#fe7649;
+  --background-color:#e2efff;
+}
+
+html {
+  font-size: 100%;
+}
+
+h1, h2 {
+  font-family: Avenir LT Std;
+  color: var(--main-color);
+}
+
+h3, h4 {
+  font-family: "muli";
+  color: var(--main-color);
+}
+
+h3 {
+  font-weight: 750;
+  font-size: 2.2rem;
+  line-height: 6rem;
+  text-transform: capitalize;
+}
+
+a, p, li, button {
+  font-family: "muli";
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 150%;
+  padding: 0.3rem 0;
+  font-style: normal;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  outline: none;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.8rem;
+  background-color: var(--button-background);
+}
+
+header {
+  padding: 0 2rem;
+}
+
+.left-side-menu {
+  width: 35%;
+  float: left;
+  padding: 0.7rem;
+}
+.left-side-menu h1 {
+  float: left;
+  font-size: 2rem;
+}
+.left-side-menu img {
+  width: 10%;
+}
+
+.right-side-menu {
+  width: 65%;
+  display: flex;
+  float: right;
+}
+.right-side-menu a {
+  margin-left: 3rem;
+  margin-top: 0.8rem;
+}
+.right-side-menu a li {
+  font-weight: 900;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+.right-side-menu a :hover {
+  color: var(--button-background);
+}
+
+.hero-section {
+  width: 100%;
+  height: 37rem;
+  background-image: url(images/doctorbanner.jpg);
+  background-repeat: no-repeat;
+}
+.hero-section .left-side-hero-section {
+  position: absolute;
+  margin-top: 9.5rem;
+  width: 40%;
+  padding: 2rem 2rem;
+  margin-left: 9rem;
+  background-color: rgba(20, 111, 223, 0.231372549);
+  left: -50rem;
+  transition: all 0.4s;
+}
+.hero-section .left-side-hero-section .text-group {
+  margin: 1.5rem 0;
+  position: relative;
+}
+.hero-section .left-side-hero-section .text-group p {
+  font-size: 1.1rem;
+}
+.hero-section .left-side-hero-section .button-group {
+  position: relative;
+}
+.hero-section .left-side-hero-section .button-group :hover {
+  color: var(--button-background);
+  background-color: var(--primary-color);
+  scale: 1.04;
+}
+
+.hero-section:hover .left-side-hero-section {
+  left: 2rem;
+}
+
+.mid-section-first {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.mid-section-first .mid-section-first-left img {
+  width: 100%;
+  height: 40rem;
+}
+.mid-section-first .mid-section-first-middle {
+  padding: 0 2rem;
+  margin-top: 11rem;
+}
+.mid-section-first .mid-section-first-middle p {
+  padding: 1rem 0;
+}
+.mid-section-first .mid-section-first-middle img {
+  padding-top: 0.4rem;
+}
+.mid-section-first .mid-section-first-right {
+  margin-top: 6rem;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.mid-section-first .mid-section-first-right div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem 0;
+  padding: 0.3rem 0;
+  border-radius: 0.2rem;
+  line-height: 3.6rem;
+  background-color: blue;
+}
+.mid-section-first .mid-section-first-right div i {
+  font-size: 1.5rem;
+}
+.mid-section-first .mid-section-first-right div h1 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.second-mid-sec-firstpart {
+  width: 100%;
+  height: 10rem;
+  text-align: center;
+  background-color: var(--background-color);
+}
+.second-mid-sec-firstpart p {
+  color: blue;
+  font-size: 1.6rem;
+}
+.second-mid-sec-firstpart h1 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.second-mid-sec-secondpart {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 4rem;
+  background-color: var(--background-color);
+}
+.second-mid-sec-secondpart .mid-second-fea1, .second-mid-sec-secondpart .mid-second-fea2, .second-mid-sec-secondpart .mid-second-fea3, .second-mid-sec-secondpart .mid-second-fea4 {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+.second-mid-sec-secondpart .mid-second-fea1 h2, .second-mid-sec-secondpart .mid-second-fea2 h2, .second-mid-sec-secondpart .mid-second-fea3 h2, .second-mid-sec-secondpart .mid-second-fea4 h2 {
+  padding: 0.5rem 0;
+}
+.second-mid-sec-secondpart .mid-second-fea1 p, .second-mid-sec-secondpart .mid-second-fea2 p, .second-mid-sec-secondpart .mid-second-fea3 p, .second-mid-sec-secondpart .mid-second-fea4 p {
+  padding-bottom: 0.4rem;
+}
+.second-mid-sec-secondpart .mid-second-fea1 img, .second-mid-sec-secondpart .mid-second-fea2 img, .second-mid-sec-secondpart .mid-second-fea3 img, .second-mid-sec-secondpart .mid-second-fea4 img {
+  transition: all 0.3s;
+}
+.second-mid-sec-secondpart .mid-second-fea1 :hover, .second-mid-sec-secondpart .mid-second-fea2 :hover, .second-mid-sec-secondpart .mid-second-fea3 :hover, .second-mid-sec-secondpart .mid-second-fea4 :hover {
+  transform: rotate(360deg);
+}
+.second-mid-sec-secondpart .mid-second-fea1:hover, .second-mid-sec-secondpart .mid-second-fea2:hover, .second-mid-sec-secondpart .mid-second-fea3:hover, .second-mid-sec-secondpart .mid-second-fea4:hover {
+  background: #fff;
+  box-shadow: 0rem 0.4rem 2rem rgba(35, 52, 53, 0.25);
+}/*# sourceMappingURL=style.css.map */
