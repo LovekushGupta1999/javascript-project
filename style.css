@@ -143,7 +143,7 @@ header {
 .mid-section-first {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
 }
 .mid-section-first .mid-section-first-left img {
   width: 100%;
@@ -202,7 +202,7 @@ header {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   grid-column-gap: 4rem;
   background-color: var(--background-color);
 }
@@ -227,4 +227,93 @@ header {
 .second-mid-sec-secondpart .mid-second-fea1:hover, .second-mid-sec-secondpart .mid-second-fea2:hover, .second-mid-sec-secondpart .mid-second-fea3:hover, .second-mid-sec-secondpart .mid-second-fea4:hover {
   background: #fff;
   box-shadow: 0rem 0.4rem 2rem rgba(35, 52, 53, 0.25);
+}
+
+.footer {
+  width: 100%;
+  background-color: #111111;
+}
+.footer .footer-sec1 {
+  width: inherit;
+  padding-top: 1rem;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+.footer .footer-sec1 .left-side-footer {
+  padding: 0.6rem;
+}
+.footer .footer-sec1 .left-side-footer h1 {
+  float: left;
+  font-size: 2rem;
+}
+.footer .footer-sec1 .left-side-footer img {
+  width: 3rem;
+}
+.footer .footer-sec1 div {
+  padding: 0 0.5rem;
+}
+.footer .footer-sec1 div h1 {
+  font-size: 2rem;
+  padding: 1.5rem 0;
+  color: white;
+  margin: 0.1rem;
+  line-height: 0.1rem;
+  text-align: left;
+}
+.footer .footer-sec1 div h3 {
+  margin: 0.1rem;
+  padding: 0.1rem;
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.5rem;
+  color: var(--primary-color);
+}
+.footer .footer-sec1 div h3 :hover {
+  color: var(--button-background);
+}
+.footer .footer-sec1 div h3 span {
+  color: blue;
+}
+.footer .footer-sec2 {
+  width: 100%;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  background-color: #2a2a2a;
+  text-align: center;
+  align-items: center;
+}
+.footer .footer-sec2 h3 {
+  color: white;
+  font-size: 1rem;
+  float: left;
+  align-items: center;
+  line-height: 2rem;
+  padding: 0;
+}
+.footer .footer-sec2 .follow {
+  display: block;
+  align-items: center;
+}
+.footer .footer-sec2 .follow i {
+  padding: 1rem;
+}
+.footer .footer-sec2 .input1 {
+  width: 15rem;
+  height: 3.2rem;
+  border-radius: 5rem 5rem 5rem 5rem;
+}
+.footer .footer-sec2 .input2 {
+  width: 5rem;
+  height: 3.2rem;
+  border-radius: 5rem 5rem 5rem 5rem;
+  font-size: 0.8rem;
+  color: white;
+  background-color: blue;
+}
+
+.footer-sec3 {
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

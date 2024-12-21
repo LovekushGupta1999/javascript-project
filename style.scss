@@ -155,7 +155,7 @@ header{
  .mid-section-first{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));
   .mid-section-first-left{
     //  width: 33%;
      img{
@@ -226,7 +226,7 @@ header{
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
     grid-column-gap: 4rem; ;
     background-color: var(--background-color);
     .mid-second-fea1 , .mid-second-fea2 , .mid-second-fea3, .mid-second-fea4{
@@ -235,6 +235,7 @@ header{
         // transition: all 0.1s linear;
         
         margin-bottom: 2rem;
+
         
         border-radius: 1rem;
       
@@ -258,3 +259,96 @@ header{
         box-shadow: 0rem 0.4rem 2rem rgba(35,52,53,0.25);
     }
 } 
+
+// -------------------------------footer section scss ------------------------
+.footer{
+    width: 100%;
+    background-color: #111111;
+    .footer-sec1{
+        width: inherit;
+        padding-top: 1rem;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
+.left-side-footer{
+  padding: .6rem;
+      h1{
+        float: left;
+        font-size: 2rem;
+
+      }
+      img{
+        width: 3rem;
+      }
+}
+  div{
+    padding: 0 .5rem;
+    h1{
+        font-size: 2rem;
+        padding: 1.5rem 0;
+        color: white;
+        margin: .1rem;
+        line-height: .1rem;
+        text-align: left;
+    }
+    h3{ margin: .1rem;
+         padding: .1rem;
+        font-size: 1.1rem;
+        color: white;
+        line-height: 1.5rem;
+        color: var(--primary-color);
+        :hover{
+            color: var(--button-background);
+        }
+      span{
+        color: blue;
+      }
+    }
+  }
+    }
+
+.footer-sec2{
+    width: 100%;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem,1fr));
+    background-color: #2a2a2a;
+    text-align: center;
+    align-items: center;
+    h3{
+        color: white;
+        font-size: 1rem;
+        float: left;
+        align-items: center;
+        line-height: 2rem;
+        padding: 0;
+    }
+    .follow{
+    display: block;
+align-items: center;
+i{
+    padding: 1rem;
+}
+    }
+ 
+    .input1{
+          width: 15rem;
+          height: 3.2rem;
+          border-radius: 5rem 5rem 5rem 5rem;
+    }
+    .input2{
+        width: 5rem;
+        height: 3.2rem;
+        border-radius: 5rem 5rem 5rem 5rem;
+        font-size: .8rem;
+        color: white;
+        background-color: blue;
+  }
+    
+}
+}
+
+.footer-sec3{
+    color: white;
+    text-align: center;
+}
