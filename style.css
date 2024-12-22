@@ -164,6 +164,7 @@ header {
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .mid-section-first .mid-section-first-right div {
   display: flex;
@@ -316,4 +317,34 @@ header {
 .footer-sec3 {
   color: white;
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    background-size: 100%;
+  }
+  .right-side-menu {
+    display: none;
+  }
+  .right-side-menu {
+    width: 100%;
+    display: none;
+    background-color: rgba(165, 97, 97, 0.2941176471);
+    text-align: center;
+  }
+  .right-side-menu a {
+    margin-left: 3rem;
+    margin-top: 0.8rem;
+  }
+  .right-side-menu a li {
+    font-weight: 900;
+    box-sizing: border-box;
+    transition: all 0.2s;
+  }
+  .right-side-menu a :hover {
+    color: var(--button-background);
+  }
+  #menu:checked ~ .right-side-menu {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

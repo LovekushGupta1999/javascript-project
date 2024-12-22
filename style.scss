@@ -181,6 +181,7 @@ header{
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
     div{
         display: flex;
         justify-content: space-evenly;
@@ -352,3 +353,44 @@ i{
     color: white;
     text-align: center;
 }
+
+// -----------------------media query-----------------------------------
+
+@media (min-width: 1024px){
+    .hero-section{
+        background-size: 100% ;
+        
+    }
+    .right-side-menu{
+        display: none;
+    }
+
+    .right-side-menu{
+        width: 100%;
+        display: none;
+        background-color: #a561614b;
+        text-align: center;
+ 
+      
+       a{
+            margin-left: 3rem;
+            margin-top: .8rem;
+    
+            li{
+            font-weight: 900;
+            box-sizing: border-box;
+            transition: all 0.2s;
+             }
+            :hover{
+            color: var(--button-background);
+             }
+        }
+
+
+    }   #menu:checked ~.right-side-menu{
+        display: block;
+    }
+}
+
+
+  
