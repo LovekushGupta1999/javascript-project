@@ -4,31 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      #form{
-        display:block;
-        position: absolute;
-        align-items: center;
-        width:50%;
-        /* text-align: center; */
-        input{
-          display: block;
-          align-items: center;
-          /* text-align: center; */
-        }
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      }
-    </style>
 </head>
 <body>
-   <form id="form">
-   <input type="text" placeholder="Enter your Name">
-   <input type="number" placeholder="Enter your Age">
-   <input type="number" placeholder="Enter your Mobile number">
+<header>
+  <nav>
+       <input type="checkbox" id="menu">
+       <label for="menu" class="checkbtn"> <i class="fa-solid fa-bars"></i></label>
+      <div class="left-side-menu">
+          <h1>MEDILINE</h1>
+          <img src="images/R.png" alt="">
+
+      </div>
+      
+     
+      <div class="right-side-menu">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About us</li></a>
+          <a href="#"><li>Departments</li></a>
+          <a href="#"><li>Tips</li></a>
+          <a href="#"><li>FAQ</li></a>
+          <a href="#"><li>Contacts</li></a>
+          <a href="#"><li><i class="fa-brands fa-facebook-f"></i></li></a>
+          <a href="#"><li><i class="fa-brands fa-twitter"></i></li></a> 
+          
+
+          <a href="#"><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
+      </div>
+  </nav>
+</header>
+   <form >
+    <div id="form">
+      <select name="Dr. list" id="doctors">
+        <option value="Dr. love">Dr. love</option>
+        <option value="Dr. kush">Dr. kush</option>
+        <option value="Dr. lovekush">Dr. lovekush</option>
+      </select>
+   <input type="text" placeholder="Enter your Name" id="input1">
+   <input type="number" placeholder="Enter your Age" id="input2">
+   <!-- <input type="number" placeholder="Enter your Mobile number">
    <input type="email" placeholder="Enter your Email">
-   <input type="text" placeholder="Enter your Address">
+   <input type="text" placeholder="Enter your Address"> -->
 
    <button onclick="getdata">submit</button>
-  </form> 
+   
+   
+  </div>
+  </form> <button onclick="display()">display</button><div id="demo"></div>
+  <script src="script.js"></script>
 </body>
 </html>
