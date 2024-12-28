@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+html{
+    font-size: 100%;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+
+    // background: url(imgpp/loginbk6.avif);
+    // background-position: center;
+    // background-size: cover;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+#login_account{
+    width: 25rem;
+    height: 30rem;
+
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+     
+    border-radius: 2.5rem;
+    border: .2rem solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      
+    h1{
+        font-family: sans-serif;
+        margin-block: 0.4rem;
+    }
+    p{
+        color: #fff;
+        a{
+            color: rgb(58, 58, 112);
+        }
+    }
+    .account_group{
+        width: 18rem;
+        margin-bottom: 2rem;
+        border-bottom: 3px solid #fff;
+
+        label{
+          position: relative;
+          
+          
+        }
+        input{
+            // width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            background: transparent;
+            border: none;
+            outline: none;
+
+            font-size: 1.2em;
+            color: #fff;
+            padding: 5px 5px 5px 10px;
+            transition: all 5s;
+        
+        
+        }
+        :focus ~ label{
+  top: -35%;
+       }
+    }    
+     
+ }
+}

@@ -332,7 +332,7 @@ nav .checkbtn {
 }
 
 @media (max-width: 1439px) {
-  nav .menu {
+  nav #menu {
     display: none;
   }
   .right-side-menu a {
