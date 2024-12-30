@@ -83,7 +83,7 @@ nav .checkbtn {
 }
 
 .left-side-menu {
-  width: 35%;
+  width: 30%;
   float: left;
   padding: 0.7rem;
 }
@@ -96,7 +96,7 @@ nav .checkbtn {
 }
 
 .right-side-menu {
-  width: 65%;
+  width: 70%;
   display: flex;
   float: right;
 }
@@ -111,6 +111,15 @@ nav .checkbtn {
 }
 .right-side-menu a :hover {
   color: var(--button-background);
+}
+.right-side-menu a .btn_1 {
+  border: 0.1rem solid blue;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+}
+.right-side-menu a .btn_1:hover {
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .hero-section {
@@ -385,6 +394,8 @@ nav .checkbtn {
   }
   #menu:checked ~ .right-side-menu {
     left: 0;
+    position: absolute;
+    z-index: 99999;
   }
 }
 @media (max-width: 776px) {

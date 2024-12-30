@@ -1,12 +1,67 @@
-function submit(){
-    let data=[
+
+
+function signup(){
+    let data=
         {
-            name:document.getElementById("input1").value,
-            age:document.getElementById("input2").value,
+            email: document.getElementById("input1").value,
+            pass: document.getElementById("input2").value
         }
-    ]
-    localStorage.setItem(data)
+    
+    localStorage.setItem("signup", JSON.stringify(data))
 }
+
+let signup_data=JSON.parse(localStorage.getItem("signup"));
+
+function login(){
+    let loginEmail=document.getElementById("email").value;
+    let loginPass=document.getElementById("password").value;
+
+    if(signup_data.email!=loginEmail || signup_data.pass!=loginPass){
+        alert("user not found");
+        return flase
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

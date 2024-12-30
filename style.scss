@@ -81,7 +81,7 @@ nav{input{
     }
 }
 .left-side-menu{
-    width: 35%;
+    width: 30%;
       float: left;
       padding: .7rem;
       h1{
@@ -94,7 +94,7 @@ nav{input{
 }
 //----------------right-side-menu scss----------------------
 .right-side-menu{
-    width: 65%;
+    width: 70%;
     display: flex;
     float: right;
 
@@ -103,13 +103,27 @@ nav{input{
         margin-top: .8rem;
 
         li{
-        font-weight: 900;
-        box-sizing: border-box;
-        transition: all 0.2s;
-         }
-        :hover{
-        color: var(--button-background);
-         }
+            font-weight: 900;
+            box-sizing: border-box;
+            transition: all 0.2s;
+             }
+            :hover{
+            color: var(--button-background);
+             }
+    
+        .btn_1{
+            // background-color: var(--button-background);
+        //     color: #fff;
+            border: .1rem solid blue;
+            border-radius: 5px;
+            padding: .2rem 1rem;
+        }
+        .btn_1:hover {
+            background-color: var(--primary-color);
+            // color: var(--button-background);
+            color: #fff;
+        }
+      
     }
 }
 //----------------our Hero section scss----------------------
@@ -454,6 +468,8 @@ i{
     }   #menu:checked ~.right-side-menu{
         // display: block;
         left: 0;
+        position: absolute;
+        z-index: 99999;
     }
 }
 

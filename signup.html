@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<header>
+  <nav id="nav">
+       <input type="checkbox" id="menu">
+       <label for="menu" class="checkbtn"> <i class="fa-solid fa-bars"></i></label>
+      <div class="left-side-menu">
+          <h1>MEDILINE</h1>
+          <img src="images/R.png" alt="">
+
+      </div>
+      
+     
+      <div class="right-side-menu">
+          <a href="#"><li>Home</li></a>
+          <a href="#"><li>About us</li></a>
+          <a href="#"><li>Departments</li></a>
+          <a href="#"><li>Tips</li></a>
+          <a href="#"><li>Contacts</li></a>
+          <a href="#"><li class="btn_1">login</li></a>
+
+          <a href="#"><li><i class="fa-brands fa-facebook-f"></i></li></a>
+          <a href="#"><li><i class="fa-brands fa-twitter"></i></li></a> 
+          <a href="#"><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
+      </div>
+  </nav>
+</header>
+  <section id="signup_sec">
+    <div id="btn"></div>
+    <div class="continer">
+        <h2>signup</h2>
+        <form action="loginaccount.html" onsubmit="signup()">
+            <div class="from-group">
+                <input type="email" required id="input1">
+              <label for="input1">Email</label>
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <p id="alertmes">enter wrong value</p>
+              
+
+              <div class="from-group">
+                <input type="password" required id="pass">
+                <label for="pass">password</label>
+                <i class="fa-solid fa-lock"></i>
+
+              </div>
+            <p id="alertmes">enter wrong value</p>
+
+              <div class="from-group">
+                <input type="text" required id="input2">
+                <label for="input2">Confirm password</label>
+                <i class="fa-solid fa-lock"></i>
+
+              </div>
+            <p id="alertmes">enter wrong value</p>
+
+             <p>
+                <input type="checkbox"> Remeber me <a href="#">Forgot Password</a>
+            </p>
+              <input id="btn" type="submit" value="signup">
+
+              <!-- <p>Don't have a Account ? <a href="#">Register</a></p> -->
+        </form>
+
+    </div>
+  </section>
+    
+</body>
+</html>

@@ -9,28 +9,32 @@
 
 
 
-
- 
- 
- body{
-    width: 100vw;
-    height: 100vh;
-
-    background: url(imgpp/loginbk6.avif);
-    background-position: center;
+body{
+    background: url(images/telemedicine-young-happy-male-middle-600nw-2083496362.webp);
     background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+ 
+ 
+ #signup_sec{
+    width: 100%;
+    height: 70vh;
 
+ 
 
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
-
+   
+    /* left: 10rem; */
 }
 .continer{
-    width: 400px;
+    width: 60% ;
     height: 500px;
+    margin-top: 3.5rem;
+    margin-left: 2rem;
 
     background: rgba(0,0,0,0.5);
+    background-image: url(images/stethoscope-512.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
     backdrop-filter: blur(10px);
 
    border-radius: 40px;
@@ -41,13 +45,22 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+   
 
+}
+form{
+    display: flex;
+
+}
+#doctors{
+    width: 18rem;
+    margin: 1rem;
 }
 
 h2{
     color: #fff;
     text-transform: uppercase;
-    padding: 20px 0;
+    padding-bottom: 20px ;
     font-size: 2em;
     
 }
@@ -55,9 +68,8 @@ h2{
     position: relative;
     width: 330px;
     border-bottom: 3px solid #fff;
-
-
-    margin: 30px 0;
+    margin-top: 25px ;
+    padding: 0 10px;
 
 }
 .from-group input{
@@ -74,13 +86,13 @@ h2{
 }
 
 .from-group label{
-    /* position: absolute; */
-    /* top: 50%; */
-    /* left: 10px; */
-    /* transform: translateY(-50%); */
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
     font-size: 1.2em;
     color: #fff;
-    /* transition: 0.5s */
+    transition: 0.5s
 
 }
 input:focus ~ label,
@@ -93,9 +105,16 @@ input:valid ~ label
     position: absolute;
     top: 50%;
     right: 20px;
-    /* transform: translateY(-50%); */
+    transform: translateY(-50%);
     color: #fff;
     font-size: 1.2em;
+}
+#alertmes{
+    text-align: start;
+    margin-left: .8rem;
+    padding: 0;
+    line-height: normal;
+    font-size: 1rem;
 }
 p{
     text-align: center;
@@ -113,17 +132,45 @@ p>a:hover{
     font-style: italic;
     color: black;
 }
+#input4{
+    width: 18rem;
+    margin: 1rem;
+}
+
+#time_slots{
+    width: 22rem;
+    height: 15rem;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,  minmax(65px, 1fr));
+    grid-column-gap: 10px;
+}
+
+.time_slot{
+    border: 1px solid blue;
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 5px;
+    color: #fff;
+}
 #btn{
-    width: 100%;
+    width: 70%;
     height: 50px;
     border-radius: 40px;
     border: none;
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: 600px;
-    margin: 10PX 0;
+    margin: 0PX 40px;
     cursor: pointer;
     transition: 0.5s;
+    margin-bottom: 4rem;
+   
+    position: relative;
 
 
 }

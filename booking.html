@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -35,24 +36,85 @@
       </div>
   </nav>
 </header>
-   <form >
-    <div id="form">
-      <select name="Dr. list" id="doctors">
-        <option value="Dr. love">Dr. love</option>
-        <option value="Dr. kush">Dr. kush</option>
-        <option value="Dr. lovekush">Dr. lovekush</option>
-      </select>
-   <input type="text" placeholder="Enter your Name" id="input1">
-   <input type="number" placeholder="Enter your Age" id="input2">
-   <!-- <input type="number" placeholder="Enter your Mobile number">
-   <input type="email" placeholder="Enter your Email">
-   <input type="text" placeholder="Enter your Address"> -->
+  
+      
+      <section id="signup_sec">
+        <div id="btn"></div>
+        <div class="continer">
 
-   <button onclick="getdata">submit</button>
+            <h2>Booking Appointment</h2>
+
+            <form action="loginaccount.html" onsubmit="submit()">\
+              <div>
+              <select name="Dr. list" id="doctors">
+                <option value="Dr. love">Dr. love</option>
+                <option value="Dr. kush">Dr. kush</option>
+                <option value="Dr. lovekush">Dr. lovekush</option>
+              </select>
+                <div class="from-group">
+                    <input type="text" required id="input1">
+                  <label for="input1">Name</label>
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <!-- <p id="alertmes">enter wrong value</p> -->
+                  
+    
+                  <div class="from-group">
+                    <input type="number" required id="input2">
+                    <label for="input2">Mobile No.</label>
+                    <!-- <i class="fa-solid fa-lock"></i> -->
+    
+                  </div>
+                <!-- <p id="alertmes">enter wrong value</p> -->
+    
+                  <div class="from-group">
+                    <input type="number" required id="input3">
+                    <label for="input3">Age</label>
+                    <!-- <i class="fa-solid fa-lock"></i> -->
+    
+                  </div>
+                <!-- <p id="alertmes">enter wrong value</p> -->
+              </div>
+              <div>
+                 <input type="date" id="input4">
+                 <div id="time_slots">Time Slots:
+                <a href="" onclick="login()"> <div class="time_slot" onclick="login()">10:00</div></a>
+                 <div class="time_slot">10:15</div>
+                 <div class="time_slot">10:30</div>
+                 <div class="time_slot">10:45</div>
+                 <div class="time_slot">11:00</div>
+                 <div class="time_slot">11:15</div>
+                 <div class="time_slot">11:30</div>
+                 <div class="time_slot">11:45</div>
+                 <div class="time_slot">12:00</div>
+                 <div class="time_slot">12:15</div>
+                 <div class="time_slot">12:30</div>
+                 <div class="time_slot">12:45</div>
+                 <div class="time_slot">1:00</div>
+                 <div class="time_slot">1:15</div>
+                 <div class="time_slot">1:30</div>
+                 <div class="time_slot">1:45</div>
+                 <div class="time_slot">2:00</div>
+                 <div class="time_slot">2:15</div>
+                 <div class="time_slot">2:30</div>
+                </div>
+                 <!-- <p>
+                    <input type="checkbox"> Remeber me <a href="#">Forgot Password</a>
+                </p> -->
+                  <input id="btn" type="submit" value="Submit">
+    
+                  <!-- <p>Don't have a Account ? <a href="#">Register</a></p> -->
+                </div>
+            </form>
+    
+        </div>
+      </section>
+   
+
+ 
    
    
-  </div>
-  </form> <button onclick="display()">display</button><div id="demo"></div>
+ 
   <script src="script.js"></script>
 </body>
 </html>

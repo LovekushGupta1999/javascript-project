@@ -36,6 +36,7 @@
   </nav>
 </header>
 <section >
+  <form action="index.html" onsubmit=" return login()"></form>
     <div id="login_account">
         <h1>
             Login
@@ -44,18 +45,18 @@
       <div class="account_group">
         <label for="email">Email &nbsp;:</label>
         <input id="email" type="email" required>
-       <label for="email"><i class="fa-regular fa-envelope"></i></label>
+       <label   class="label_1" for="email"><i class="fa-regular fa-envelope"></i></label>
       
       </div>
       <div class="account_group">
         <label for="password">Password&nbsp;:</label>
         <input id="password"  type="password" required>
-        <label for="password"><i class="fa-solid fa-lock"></i></label>
+        <label class="label_1" for="password"><i class="fa-solid fa-lock"></i></label>
 
       </div>
-      <p><input type="checkbox">Remeber me! <a href="#">Forget Password</a></p>
-      <input  id=btn_login type="button" value="login">
-      <p>don't have an account? <a href="#">Register</a></p>
+      <p><input type="checkbox">&nbsp;Remeber me!  <a href="#">Forget Password</a></p>
+      <input  id=btn_login type="submit" value="login">
+      <p>don't have an account? &nbsp; <a href="signup.html">Register</a></p>
 
       </div>
 </section>
