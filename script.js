@@ -22,6 +22,24 @@ function login(){
     }
 }
 
+function submit(){
+    let patientdata=
+        {
+        
+      doctor:document.getElementById("doctors").value,
+      name:document.getElementById("inputA").value,
+      monumber:document.getElementById("inputB").value,
+      age:document.getElementById("inputC").value,
+      date:document.getElementById("inputD").value
+      
+    } 
+    localStorage.setItem("patientdetails",JSON.stringify(patientdata))
+}
+
+
+
+
+let patientdeta=JSON.parse(localStorage.getItem("patientdetails"));
 
 
 
@@ -36,47 +54,23 @@ function login(){
 
 
 
+function display(){
 
+let table=`<table border=2px solid green>
+<tr>
+<th>Name</th>
+<th>Mobile_NO</th>
+<th>Age</th>
+<th>Date</th>
+<th></th>
+</tr>`
+ table+=`<tr>
+<td>${patientdeta.name}</td>
+<td>${patientdeta.monumber}</td>
+<td>${patientdeta.age}</td>
+<td>${patientdeta.date}</td>
+`  
+table+=`</table>`
+document.getElementById("demo").innerHTML=table;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function display(){
-
-// let table=`<table border=2px solid green>
-// <tr>
-// <th>name</th>
-// <th>age</th>
-// </tr>`
-//  table+=`<tr>
-// <td>${data}</td>
-// <td>${data1}</td>
-// `
-// table+=`</table>`
-// document.getElementById("demo").innerHTML=table;
-
-// }
+}
