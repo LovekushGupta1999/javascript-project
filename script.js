@@ -74,3 +74,34 @@ table+=`</table>`
 document.getElementById("demo").innerHTML=table;
 
 }
+
+function seterror(id , err){
+    let error=document.getElementByid(id);
+    error.innerHTML=err;
+
+}
+
+function validation(){
+
+    let name= document.getElementById("inputA").value;
+    if(name.length<5){
+      seterror("altername" ,"enter your full name" );
+      return false;
+    }
+    
+    let mobino=document.getElementById("inputB").value;
+    if(mobino.length!=10){
+        seterror("altermono", "enter 10 digits");
+        return false;
+    }
+
+    let age=document.getElementById("inputC").value;
+    if(age<115){
+        seterror("alterage", "check your age again");
+        return false;
+    }
+
+    // 
+    
+    return true;
+}

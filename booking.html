@@ -44,7 +44,7 @@
 
             <h2>Booking Appointment</h2>
 
-            <form action="index.html" onsubmit="submit()">
+            <form action="index.html" onsubmit="validation()" >
               <div>
               <select name="Dr. list" id="doctors">
                 <option value="Dr. love">Dr. love</option>
@@ -56,7 +56,7 @@
                   <label for="input1">Name</label>
                   <i class="fa-regular fa-envelope"></i>
                 </div>
-                <!-- <p id="alertmes">enter wrong value</p> -->
+                <p id="alertname"></p>
                   
     
                   <div class="from-group">
@@ -65,7 +65,7 @@
                     <!-- <i class="fa-solid fa-lock"></i> -->
     
                   </div>
-                <!-- <p id="alertmes">enter wrong value</p> -->
+                <p id="alertmono"></p>
     
                   <div class="from-group">
                     <input type="number" required id="inputC">
@@ -73,7 +73,7 @@
                     <!-- <i class="fa-solid fa-lock"></i> -->
     
                   </div>
-                <!-- <p id="alertmes">enter wrong value</p> -->
+                <p id="alertage"></p>
               </div>
               <div>
                  <input type="date" id="inputD">
