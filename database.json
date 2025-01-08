@@ -1,0 +1,20 @@
+{
+  "patient": [
+    {
+      "id": "6a76",
+      "doctor": "Dr. love",
+      "name": "Zubair",
+      "monumber": "0487928447",
+      "age": "45",
+      "date": "2025-01-10"
+    },
+    {
+      "id": "dcb5",
+      "doctor": "Dr. love",
+      "name": "mafhgo",
+      "monumber": "4644683787",
+      "age": "26",
+      "date": "2025-01-18"
+    }
+  ]
+}
