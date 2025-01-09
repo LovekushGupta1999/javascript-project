@@ -39,30 +39,30 @@
     <div id="btn"></div>
     <div class="continer">
         <h2>signup</h2>
-        <form action="loginaccount.html" onsubmit="signup()">
+        <form action="loginaccount.html" onsubmit="return signup()">
             <div class="from-group">
                 <input type="email" required id="input1">
               <label for="input1">Email</label>
               <i class="fa-regular fa-envelope"></i>
             </div>
-            <p id="alertmes">enter wrong value</p>
+            <p id="alertmes"></p>
               
 
               <div class="from-group">
-                <input type="password" required id="pass">
+                <input type="password" required id="pass" id="input2">
                 <label for="pass">password</label>
                 <i class="fa-solid fa-lock"></i>
 
               </div>
-            <p id="alertmes">enter wrong value</p>
+            <p id="alertpass"></p>
 
               <div class="from-group">
-                <input type="text" required id="input2">
+                <input type="text" required id="input3">
                 <label for="input2">Confirm password</label>
                 <i class="fa-solid fa-lock"></i>
 
               </div>
-            <p id="alertmes">enter wrong value</p>
+            <p id="alertmes"></p>
 
              <p>
                 <input type="checkbox"> Remeber me <a href="#">Forgot Password</a>

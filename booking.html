@@ -44,7 +44,7 @@
 
             <h2>Booking Appointment</h2>
 
-            <form action="#" onsubmit=" return inserted_data()" >
+            <form action="#" onsubmit="return inserted_data()" >
               <div>
               <select name="Dr. list" id="doctors">
                 <option value="Dr. love">Dr. love</option>
@@ -81,25 +81,25 @@
               <div>
                  <input type="date" id="inputD">
                   <div id="time_slots">Time Slots:
-                <a href="" > <div class="time_slot">10:00</div></a>
-                 <div onclick="setslot()" class="time_slot">10:15</div>
-                 <div class="time_slot">10:30</div>
-                 <div class="time_slot">10:45</div>
-                 <div class="time_slot">11:00</div>
-                 <div class="time_slot">11:15</div>
-                 <div class="time_slot">11:30</div>
-                 <div class="time_slot">11:45</div>
-                 <div class="time_slot">12:00</div>
-                 <div class="time_slot">12:15</div>
-                 <div class="time_slot">12:30</div>
-                 <div class="time_slot">12:45</div>
-                 <div class="time_slot">1:00</div>
-                 <div class="time_slot">1:15</div>
-                 <div class="time_slot">1:30</div>
-                 <div class="time_slot">1:45</div>
-                 <div class="time_slot">2:00</div>
-                 <div class="time_slot">2:15</div>
-                 <div class="time_slot">2:30</div>
+                 <div onclick="setslot(`${id}`)" id="slot0" class="time_slot">10:00</div>
+                 <div onclick="setslot(`${id}`)" id="slot1" class="time_slot">10:15</div>
+                 <div onclick="setslot(`${id}`)" id="slot2" class="time_slot">10:30</div>
+                 <div onclick="setslot(`${id}`)" id="slot3" class="time_slot">10:45</div>
+                 <div onclick="setslot(`${id}`)" id="slot4" class="time_slot">11:00</div>
+                 <div onclick="setslot(`${id}`)" id="slot5" class="time_slot">11:15</div>
+                 <div onclick="setslot(`${id}`)" id="slot6" class="time_slot">11:30</div>
+                 <div onclick="setslot(`${id}`)" id="slot7" class="time_slot">11:45</div>
+                 <div onclick="setslot(`${id}`)" id="slot8" class="time_slot">12:00</div>
+                 <div onclick="setslot(`${id}`)" id="slot9" class="time_slot">12:15</div>
+                 <div onclick="setslot(`${id}`)" id="slot10" class="time_slot">12:30</div>
+                 <div onclick="setslot(`${id}`)" id="slot11"class="time_slot">12:45</div>
+                 <div onclick="setslot(`${id}`)" id="slot12" class="time_slot">1:00</div>
+                 <div onclick="setslot(`${id}`)" id="slot13" class="time_slot">1:15</div>
+                 <div onclick="setslot(`${id}`)" id="slot14" class="time_slot">1:30</div>
+                 <div onclick="setslot(`${id}`)" id="slot15"class="time_slot">1:45</div>
+                 <div onclick="setslot(`${id}`)" id="slot16"class="time_slot">2:00</div>
+                 <div onclick="setslot(`${id}`)" id="slot17" class="time_slot">2:15</div>
+                 <div onclick="setslot(`${id}`)" id="slot18"class="time_slot">2:30</div>
                 </div> 
                  <!-- <p>
                     <input type="checkbox"> Remeber me <a href="#">Forgot Password</a>
@@ -113,12 +113,31 @@
         </div>
       </section>
    
+ 
 
  
    <button id="disbtn" onclick="display()">Display</button>
-  <div id="demo"></div>
+   <div id="table_data">
+   <table  border=2px solid green style="width: 100%; background-color:white; text-align:center">
+    
+      <thead >
+        <th>Id</th>
+        <th>Doctor</th>
+        <th>Name</th>
+        <th>Mobile_NO</th>
+        <th>Age</th>
+        <th>Date</th>
+        <th>Time-Slot</th>
+        <th>features</th>
+  
+      </thead>
+        <tbody id="showdata"></tbody>
+</table>
+</div>
+  <div id="demo25" ></div>
   <div id="editform"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  
   <script src="script.js"></script>
 </body>

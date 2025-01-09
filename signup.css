@@ -17,7 +17,7 @@ body{
  
  
  #signup_sec{
-    width: 100vw;
+    width: 100%;
     height: 70vh;
 
  
@@ -26,7 +26,7 @@ body{
     align-items: center;
 }
 .continer{
-    width: 550px;
+    width: 40%;
     height: 500px;
     margin-top: 6.5rem;
     margin-right: 5rem;
@@ -56,7 +56,7 @@ h2{
 }
 .from-group{
     position: relative;
-    width: 330px;
+    width: 100%;
     border-bottom: 3px solid #fff;
 
 
@@ -142,4 +142,53 @@ p>a:hover{
     background:rgba(0,0,0,0.3);
     color: #fff;
 
+}
+
+
+/* ........................................Media Query........................................ */
+
+@media (max-width: 1024px){
+    #signup_sec{
+
+        justify-content: center;
+    }
+ .continer{
+    width: 80%;
+ }
+}
+
+@media (max-width: 776px){
+    html{
+        font-size: 80%;
+    }
+    #signup_sec{
+        justify-content: center;
+    }
+    .continer{
+        width: 150%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 90px;
+    }
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 80%;
+    }
+    .continer{
+        width: 370%;
+     }
+}
+
+@media (max-width: 425px){
+    html{
+        font-size: 60%;
+    }
+    .continer{
+        width: 700%;
+        justify-content: center;
+        align-items: center;
+        margin-right: 25px;
+    }
 }

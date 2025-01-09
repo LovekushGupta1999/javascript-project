@@ -1,13 +1,21 @@
 // ................................signup apply...............................
 
 function signup(){
-    let data=
+    let data=[
         {
             email: document.getElementById("input1").value,
-            pass: document.getElementById("input2").value
+            pass: document.getElementById("input2").value,
+            cpass: document.getElementById("input3").value
+           
         }
-    
+    ]
+    if(data.pass!=data.cpass){
+        seterror("alertpass", "password not match")
+        return false;
+    }
+    else{
     localStorage.setItem("signup", JSON.stringify(data))
+    }
 }
 
 let signup_data=JSON.parse(localStorage.getItem("signup"));
@@ -21,13 +29,15 @@ function login(){
     let loginPass=document.getElementById("password").value;
 
     if(signup_data.email!=loginEmail || signup_data.pass!=loginPass){
-        alert("user not found");
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: '<a href="#">User Not Found?</a>'
+          });
         return false;
     }
 }
-
-
-
 
 
 
@@ -39,13 +49,45 @@ function seterror(id , err){
 
 }
 
-// function setslot()
+//.................................alert Message........................................
+
+// document.getElementById('button-group').addEventListener('click', function(){
+    
+function alertwindow(){
+    Swal.fire({
+        title: 'Login / Sign Up',
+        html: `
+            <p>Please login to your account or sign up to get started.</p><br>
+            <a href="drlogin.html" class="swal-link">Login Here</a> <br><br>
+            <a href="drsignup.html" class="swal-link">Sign Up Here</a>
+        `,
+        icon: 'info',
+        confirmButtonText: 'Close'
+    });
+};
+//................................Get time slot from div..................................
+function setslot(id){
+
+    var div1=document.getElementById(id)
+    var slotvalue=div1.innerText;
+    let div2 =document.getElementById("demo25")
+       div2.innerHTML+=  `    <input type="text" value="${slotvalue}" id="slot123" ><br>
+`
+    div1.style.backgroundColor="green"
+         console.log(div1.innerText)
+        
+
+         
+}
 //...................................insertion data function.............................
 
 function inserted_data(){
+     
+  
+
     let name= document.querySelector("#inputA").value;
     
-        if(name.length<5){
+        if(name.length<7){
           seterror("alertname" ,"*enter your full name" );
           return false;
         }
@@ -82,8 +124,9 @@ function inserted_data(){
   name:document.getElementById("inputA").value,
   monumber:document.getElementById("inputB").value,
   age:document.getElementById("inputC").value,
-  date:document.getElementById("inputD").value
-  
+  date:document.getElementById("inputD").value,
+  slot:document.getElementById("slot123").value,
+
    } ;
 
  fetch("http://localhost:3000/patient", {
@@ -92,9 +135,15 @@ function inserted_data(){
     headers:{'content-type':'application/json'},
     body: JSON.stringify(patientdata)
 
- }).then(r=>alert("Data submitted...!!"))
+ }).Swal.fire({
+    title: "Submitted",
+    text: "You clicked the button!",
+    icon: "success"
+  })
+ 
   
-//  return true;
+
+
 }
 
 
@@ -107,29 +156,23 @@ async function display(){
   let a= await fetch("http://localhost:3000/patient");
   let b= await a.json();
   let database= b.map((patientdata)=>
-`<table border=2px solid green style="width: 100%; background-color:white; text-align:center">
-<tr >
-<th>Doctor</th>
-<th>Name</th>
-<th>Mobile_NO</th>
-<th>Age</th>
-<th>Date</th>
-<th>features</th>
-<th></th>
-</tr>
+`
+
 <tr>
+<td>${patientdata.id}</td>
 <td>${patientdata.doctor}</td>
 <td>${patientdata.name}</td>
 <td>${patientdata.monumber}</td>
 <td>${patientdata.age}</td>
 <td>${patientdata.date}</td>
-<td><button onclick=delete_data(${patientdata.id})>Delete</button></td>
-<td><button onclick=edit(${patientdata.id})>edit</button></td>
-<td>  <button type="submit"  onclick="myupdate('${patientdata.id}')">Update</button></td>
+<td>${patientdata.slot}</td>
+<td><button onclick="delete_data(${patientdata.id})">Delete</button></td>
+<td><button onclick="edit(${patientdata.id})">Edit</button></td>
+<td><button onclick="myupdate(${patientdata.id})">Update</button></td>
 
 </tr>
 </table>`).join(" ")
-document.getElementById("demo").innerHTML=database;
+document.getElementById("showdata").innerHTML=database;
 
 }
 
@@ -138,12 +181,16 @@ document.getElementById("demo").innerHTML=database;
 async function edit(id){
     let res =await fetch(`http://localhost:3000/patient/${id}`);
     let data =await res.json();
-    let edit_frm=`
-    <input type="text" value="${data.id}" id="id1" ><br>
+    let edit_form=`
+    <input type="text" value="${data.id}" id="id1" readonly><br>
+
     <input type="text" value="${data.name}" id="name1" ><br>
-    <input type="text" value="${data.city}" id="city1"><br>
+    <input type="number" value="${data.monumber}" id="monumber1"><br>
+    <input type="text" value="${data.age}" id="age1"><br>
+    <input type="date" value="${data.date}" id="date1"><br>
+    <input type="time" value="${data.slot}" id="slot1"><br>
     `
-    document.querySelector("#editform").innerHTML=edit_frm
+    document.querySelector("#editform").innerHTML=edit_form
 
 }
 
@@ -151,10 +198,15 @@ function myupdate(id){
   
     let update_data={
         id: document.querySelector("#id1").value,
+        // doctor: document.querySelector("#doctors1").value,
         name: document.querySelector("#name1").value,
-        city: document.querySelector("#city1").value
+        city: document.querySelector("#city1").value,
+        monumber:document.getElementById("monumber1").value,
+        age:document.getElementById("age1").value,
+        date:document.getElementById("date1").value,
+        slot:document.getElementById("slot1").value,
     }
-    fetch(`http://localhost:3000/student/${id}`,{
+    fetch(`http://localhost:3000/patient/${id}`,{
         method:"PUT",
         headers:{
             "content-type":"application/json"
@@ -169,7 +221,7 @@ function myupdate(id){
 
 function delete_data(id){
     fetch(`http://localhost:3000/patient/${id}`,{
-        method: "Delete"
+        method: "DELETE"
     }).then(r=>alert("deleted!"))
 }
 
