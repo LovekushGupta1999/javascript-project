@@ -144,7 +144,7 @@ function inserted_data(){
    
   }));
  
-  
+  return true;
 }
 
 
