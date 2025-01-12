@@ -55,19 +55,22 @@ li{
 
 }
 button{
-    padding: .7rem 1rem;
-    border-radius: 0.6rem;
+    padding: 1rem 1rem;
+    border-radius: 2px;
     border: none;
     outline: none;
+    color: #fff;
     line-height: 1.5rem;
     text-transform: capitalize;
     cursor: pointer;
     font-family:Avenir LT Std;
     font-style: normal;
-    font-weight: 800;
-    font-size: 1.8rem;
+    font-weight: 900;
+    font-size: 1.6rem;
+    border: 1px solid #01ca8b;
     background-color: var(--button-background);
-
+    box-shadow: 0 0 0 4em #01ca8b inset;
+    transition: all 300ms ease ;
 
 }
 header{
@@ -165,8 +168,11 @@ nav{input{
  
 
      :hover{
-          color: var(--button-background);
-          background-color: var(--primary-color);
+        box-shadow: 0 0 0 0 #01ca8b inset;
+        background: #fff;
+
+          color: #01ca8b;
+          
           scale: 1.04;
        }
     }

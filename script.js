@@ -176,7 +176,7 @@ document.getElementById("showdata").innerHTML=database;
 
 }
 
-// ................................updation data function.....................
+// ..............................Get data for updation function.....................
 
 async function edit(id){
     let res =await fetch(`http://localhost:3000/patient/${id}`);
@@ -204,6 +204,7 @@ async function edit(id){
 
 }
 
+// ...................................put data in database.......................
 function myupdate(id){ 
   
     let update_data={
@@ -287,50 +288,3 @@ function delete_data(id){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function validation(){
-
-//     let name= document.getElementById("inputA").value;
-//     if(name.length<5){
-//       seterror("altername" ,"enter your full name" );
-//       return false;
-//     }
-    
-//     let mobino=document.getElementById("inputB").value;
-//     if(mobino.length!=10){
-//         seterror("altermono", "enter 10 digits");
-//         return false;
-//     }
-
-//     let age=document.getElementById("inputC").value;
-//     if(age<115){
-//         seterror("alterage", "check your age again");
-//         return false;
-//     }
-
-//     // 
-    
-//     return true;
-// }
