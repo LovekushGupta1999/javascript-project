@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor's Appointment</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -13,6 +15,7 @@
     <nav>
          <input type="checkbox" id="menu">
          <label for="menu" class="checkbtn"> <i class="fa-solid fa-bars"></i></label>
+         
         <div class="left-side-menu">
             <h1>MEDILINE</h1>
             <img src="images/R.png" alt="">
@@ -57,7 +60,7 @@
     <!-- -------------------------mid section first html-------------------->
 
     <section>
-        <div class="mid-section-first">
+        <div class="mid-section-first" data-aos="fade-up">
             <div class="mid-section-first-left">
                 <img src="images/doctorimage.png" alt="">
             </div>
@@ -80,32 +83,43 @@
     <!-- --------------------------------second mid  section start----------------------------->
 
      <main>
-        <section class="second-mid-sec-firstpart">
+        <section class="second-mid-sec-firstpart"  data-aos="fade-down">
             <p>Departments</p>
             <h1>Our Medical Services</h1>
             <p>..................</p>
         </section>
-        <section class="second-mid-sec-secondpart">
-            <div class="mid-second-fea1">
+        <section class="second-mid-sec-secondpart" data-aos="fade-up">
+            <div class="mid-second-fea1" data-aos="fade-down-right" >
                 <img src="images/dental-care-p.png" alt="">
                 <h2>Dental Care</h2>
                 <p>ipsum akjfi snewuo sgaew askgi akie aehw weiin sghaosdn signe eurnd </p>
             </div>
-            <div class="mid-second-fea2">
+            <div class="mid-second-fea2" data-aos="zoom-in-down">
                 <img src="images/eye-p.png" alt="">
                 <h2>Eye Care</h2>
                 <p>ipsum akjfi snewuo sgaew askgi akie aehw weiin sghaosdn signe eurnd </p>
                 
             </div>
-            <div class="mid-second-fea3">
+            <div class="mid-second-fea3" data-aos="fade-down-left">
                 <img src="images/medicine-p.png" alt="">
                 <h2>Medicine</h2>
                 <p>ipsum akjfi snewuo sgaew askgi akie aehw weiin sghaosdn signe eurnd </p>
 
             </div>
-            <div class="mid-second-fea4">
+            <div class="mid-second-fea4"  data-aos="fade-up-right">
                 <img src="images/cardiogram1.png" alt="">
                 <h2>Cardiology</h2>
+                <p>ipsum akjfi snewuo sgaew askgi akie aehw weiin sghaosdn signe eurnd </p>
+
+            </div>
+            <div class="mid-second-fea1" data-aos="zoom-in-up">
+                <img src="images/dental-care-p.png" alt="">
+                <h2>Dental Care</h2>
+                <p>ipsum akjfi snewuo sgaew askgi akie aehw weiin sghaosdn signe eurnd </p>
+            </div>
+            <div class="mid-second-fea3"  data-aos="fade-up-left">
+                <img src="images/medicine-p.png" alt="">
+                <h2>Medicine</h2>
                 <p>ipsum akjfi snewuo sgaew askgi akie aehw weiin sghaosdn signe eurnd </p>
 
             </div>
@@ -113,7 +127,8 @@
         </section>
      </main>
 
-     <footer class="footer">
+     <footer class="footer" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
         <section class="footer-sec1">
             <div>
                 <div class="left-side-footer">
@@ -165,6 +180,15 @@
         <section class="footer-sec3">© 2023 Mediline. All Rights Reserved by love</section>
      </footer>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+     <script>
+        AOS.init();
+      </script>
+
      <script src="script.js"></script>
 </body>
 </html>

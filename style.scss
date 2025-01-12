@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 body{
+    overflow-x:hidden;
+   }
+   
+body{
     --main-color: #283526;
     --primary-color: #888888;
     --button-background: #4b709e;
@@ -407,10 +411,16 @@ i{
             background-size: 110% ;
             
         }
-
+        .footer-sec1{
+            text-align: center;
+            h1{
+                text-align: center;
+            }
+        }
       
 }
 @media (max-width: 1024px){
+  
     nav{
 
     .checkbtn{
@@ -471,6 +481,13 @@ i{
         position: absolute;
         z-index: 99999;
     }
+
+    .footer-sec1{
+        text-align: center;
+        h1{
+            text-align: center;
+        }
+    }
 }
 
 }
@@ -478,7 +495,15 @@ i{
     html{
         font-size: 60%;
     }
+    .footer-sec1{
+        text-align: center;
+        h1{
+            text-align: center;
+        }
+    }
 }
+
+
 @media (max-width: 425px){
 
     html{

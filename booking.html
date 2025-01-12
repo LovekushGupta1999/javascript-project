@@ -44,7 +44,7 @@
 
             <h2>Booking Appointment</h2>
 
-            <form action="#" onsubmit="return inserted_data()" >
+            <form action="#" onsubmit=" inserted_data()" >
               <div>
               <select name="Dr. list" id="doctors">
                 <option value="Dr. love">Dr. love</option>
@@ -80,7 +80,7 @@
               </div>
               <div>
                  <input type="date" id="inputD">
-                  <div id="time_slots">Time Slots:
+                  <div id="time_slots"><p id="ptime">Time Slots:</p>
                  <div onclick="setslot(`${id}`)" id="slot0" class="time_slot">10:00</div>
                  <div onclick="setslot(`${id}`)" id="slot1" class="time_slot">10:15</div>
                  <div onclick="setslot(`${id}`)" id="slot2" class="time_slot">10:30</div>
@@ -116,12 +116,12 @@
  
 
  
-   <button id="disbtn" onclick="display()">Display</button>
+   <button id="displaybtn" onclick="display()">Display</button>
    <div id="table_data">
    <table  border=2px solid green style="width: 100%; background-color:white; text-align:center">
     
       <thead >
-        <th>Id</th>
+      
         <th>Doctor</th>
         <th>Name</th>
         <th>Mobile_NO</th>

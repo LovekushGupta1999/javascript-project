@@ -1,22 +1,23 @@
 // ................................signup apply...............................
 
 function signup(){
-    let data=[
+    let data=
         {
             email: document.getElementById("input1").value,
             pass: document.getElementById("input2").value,
             cpass: document.getElementById("input3").value
            
         }
-    ]
+    
     if(data.pass!=data.cpass){
-        seterror("alertpass", "password not match")
+        seterror("alertpass","*password not match")
         return false;
     }
     else{
     localStorage.setItem("signup", JSON.stringify(data))
     }
 }
+
 
 let signup_data=JSON.parse(localStorage.getItem("signup"));
 
@@ -51,21 +52,22 @@ function seterror(id , err){
 
 //.................................alert Message........................................
 
-// document.getElementById('button-group').addEventListener('click', function(){
-    
-function alertwindow(){
+// document.getElementById('loginBtn').addEventListener('click', function(){
+    function alertwindow(){
     Swal.fire({
         title: 'Login / Sign Up',
         html: `
             <p>Please login to your account or sign up to get started.</p><br>
-            <a href="drlogin.html" class="swal-link">Login Here</a> <br><br>
-            <a href="drsignup.html" class="swal-link">Sign Up Here</a>
+            <a href="loginaccount.html" class="swal-link"><button>Login Here</button></a> <br><br>
+            <a href="signup.html" class="swal-link"><button>Sign up Here</button></a>
         `,
         icon: 'info',
         confirmButtonText: 'Close'
     });
 };
+
 //................................Get time slot from div..................................
+
 function setslot(id){
 
     var div1=document.getElementById(id)
@@ -76,9 +78,8 @@ function setslot(id){
     div1.style.backgroundColor="green"
          console.log(div1.innerText)
         
-
-         
-}
+        }
+        
 //...................................insertion data function.............................
 
 function inserted_data(){
@@ -135,15 +136,15 @@ function inserted_data(){
     headers:{'content-type':'application/json'},
     body: JSON.stringify(patientdata)
 
- }).Swal.fire({
+ }).then(r=>Swal.fire({
     title: "Submitted",
     text: "You clicked the button!",
-    icon: "success"
-  })
+    icon: "success",
+    confirmButtonText: "ok"
+   
+  }));
  
   
-
-
 }
 
 
@@ -159,16 +160,15 @@ async function display(){
 `
 
 <tr>
-<td>${patientdata.id}</td>
+
 <td>${patientdata.doctor}</td>
 <td>${patientdata.name}</td>
 <td>${patientdata.monumber}</td>
 <td>${patientdata.age}</td>
 <td>${patientdata.date}</td>
 <td>${patientdata.slot}</td>
-<td><button onclick="delete_data(${patientdata.id})">Delete</button></td>
-<td><button onclick="edit(${patientdata.id})">Edit</button></td>
-<td><button onclick="myupdate(${patientdata.id})">Update</button></td>
+<td><button onclick="delete_data('${patientdata.id}')"><i class="fa-solid fa-trash"></i></button>
+<button onclick="edit('${patientdata.id}')"><i class="fa-solid fa-user-pen"></i></button></td>
 
 </tr>
 </table>`).join(" ")
@@ -183,12 +183,22 @@ async function edit(id){
     let data =await res.json();
     let edit_form=`
     <input type="text" value="${data.id}" id="id1" readonly><br>
+      <select name="Dr. list" id="doctors1">
+                <option value="Dr. love">Dr. love</option>
+                <option value="Dr. kush">Dr. kush</option>
+                <option value="Dr. lovekush">Dr. lovekush1</option>
+                <option value="Dr. lovekush">Dr. lovekush2</option>
+                <option value="Dr. lovekush">Dr. lovekush3</option>
+                <option value="Dr. lovekush">Dr. lovekush4</option>
+              </select><br>
 
     <input type="text" value="${data.name}" id="name1" ><br>
     <input type="number" value="${data.monumber}" id="monumber1"><br>
     <input type="text" value="${data.age}" id="age1"><br>
     <input type="date" value="${data.date}" id="date1"><br>
     <input type="time" value="${data.slot}" id="slot1"><br>
+<td><button id="updatebtn" onclick="myupdate('${data.id}')">Update</button></td>
+
     `
     document.querySelector("#editform").innerHTML=edit_form
 
@@ -198,13 +208,13 @@ function myupdate(id){
   
     let update_data={
         id: document.querySelector("#id1").value,
-        // doctor: document.querySelector("#doctors1").value,
+        doctor: document.querySelector("#doctors1").value,
         name: document.querySelector("#name1").value,
-        city: document.querySelector("#city1").value,
+
         monumber:document.getElementById("monumber1").value,
         age:document.getElementById("age1").value,
         date:document.getElementById("date1").value,
-        slot:document.getElementById("slot1").value,
+        slot:document.getElementById("slot1").value
     }
     fetch(`http://localhost:3000/patient/${id}`,{
         method:"PUT",

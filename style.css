@@ -5,6 +5,10 @@
 }
 
 body {
+  overflow-x: hidden;
+}
+
+body {
   --main-color: #283526;
   --primary-color: #888888;
   --button-background: #4b709e;
@@ -351,6 +355,12 @@ nav .checkbtn {
   .right-side-menu .hero-section {
     background-size: 110%;
   }
+  .right-side-menu .footer-sec1 {
+    text-align: center;
+  }
+  .right-side-menu .footer-sec1 h1 {
+    text-align: center;
+  }
 }
 @media (max-width: 1439px) and (max-width: 1024px) {
   nav .checkbtn {
@@ -397,10 +407,22 @@ nav .checkbtn {
     position: absolute;
     z-index: 99999;
   }
+  .footer-sec1 {
+    text-align: center;
+  }
+  .footer-sec1 h1 {
+    text-align: center;
+  }
 }
 @media (max-width: 776px) {
   html {
     font-size: 60%;
+  }
+  .footer-sec1 {
+    text-align: center;
+  }
+  .footer-sec1 h1 {
+    text-align: center;
   }
 }
 @media (max-width: 425px) {
