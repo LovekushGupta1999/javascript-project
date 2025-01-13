@@ -226,7 +226,11 @@ p>a:hover{
 
 /* ........................................Media Query........................................ */
 @media (max-width: 1446px){
-    .continer{
+    
+    body{
+        overflow-x:hidden;
+       }
+       .continer{
         width: 70%;
         height: 500px;
     }
@@ -252,6 +256,9 @@ p>a:hover{
 }
 
 @media (max-width: 1025px){
+     body{
+        overflow-x:hidden;
+       }
     .continer{
         width: 70%;
         height: 500px;
@@ -278,6 +285,9 @@ p>a:hover{
 }
 
 @media (max-width: 776px){
+    body{
+        overflow-x:hidden;
+       }
     html{
         font-size: 60%;
     }
@@ -339,6 +349,10 @@ p>a:hover{
 }
 
 @media (max-width: 375px){
+    body{
+        overflow-x:hidden;
+       }
+    
     .continer{
         width: 100%;
         margin-left: 0px;

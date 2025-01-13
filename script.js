@@ -224,6 +224,8 @@ function myupdate(id){
         },
         body: JSON.stringify(update_data)
     }).then(r=>alert("updated.........!!"))
+
+    location.reload();
 }
 
 

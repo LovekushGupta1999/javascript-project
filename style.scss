@@ -398,7 +398,9 @@ i{
 
 // -----------------------media query-----------------------------------
 @media ( max-width: 1439px){
-   
+    body{
+        overflow-x:hidden;
+       }
     nav{
         #menu{
             display: none;
@@ -426,7 +428,9 @@ i{
       
 }
 @media (max-width: 1024px){
-  
+    body{
+        overflow-x:hidden;
+       }
     nav{
 
     .checkbtn{
@@ -497,7 +501,12 @@ i{
 }
 
 }
-@media (max-width: 776px){
+
+@media (max-width: 768px){
+    body{
+        overflow-x:hidden;
+       }
+    
     html{
         font-size: 60%;
     }
@@ -511,7 +520,9 @@ i{
 
 
 @media (max-width: 425px){
-
+    body{
+        overflow-x:hidden;
+       }
     html{
         font-size: 50%;
     }
