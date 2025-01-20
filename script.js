@@ -71,7 +71,7 @@ function seterror(id , err){
 function setslot(id){
 
     var div1=document.getElementById(id)
-    var slotvalue=div1.innerText;
+    var slotvalue=div1.innerHTML;
     let div2 =document.getElementById("demo25")
        div2.innerHTML+=  `    <input type="text" value="${slotvalue}" id="slot123" ><br>
 `
