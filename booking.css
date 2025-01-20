@@ -506,6 +506,15 @@ button:hover {
     th, td {
         padding: 0px 0px;
     }
+    #alertname{
+        margin-left: -8.5rem;
+    }
+    #alertmono{
+        margin-left: -6rem;
+    }
+    #alertage{
+        margin-left: -8rem;
+    }
 }
 
 @media (max-width: 375px){
@@ -531,6 +540,9 @@ button:hover {
         padding: 0 10px;
         margin-left: 45px;
     
+    }
+    #btn{
+        top: 690px;
     }
     #time_slots{
         width: 32rem;
@@ -559,6 +571,15 @@ button:hover {
 
     th, td {
         padding: 0px;
+    }
+    #alertname{
+        margin-left: -1rem;
+    }
+    #alertmono{
+        margin-left: -1rem;
+    }
+    #alertage{
+        margin-left: -2rem;
     }
 }
 

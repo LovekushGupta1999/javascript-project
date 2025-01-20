@@ -99,7 +99,7 @@ function inserted_data(){
         let mobino=document.querySelector("#inputB").value;
 
         if(mobino.length!=10){
-            seterror("alertmono", "*enter 10 digits");
+            seterror("alertmono", "*check your mobile number ");
             return false;
         }
         else{
