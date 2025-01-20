@@ -23,8 +23,9 @@ section {
   align-items: center;
 }
 section #login_account {
-  width: 120%;
+  width: 130%;
   height: 30rem;
+  margin-left: -2.4rem;
   background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -59,7 +60,7 @@ section #login_account .account_group label {
 }
 section #login_account .account_group .label_1 {
   position: relative;
-  left: -100%;
+  left: -96%;
   transition: all 0.5s;
   color: #fff;
 }
