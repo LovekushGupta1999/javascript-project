@@ -52,7 +52,6 @@ function seterror(id , err){
 
 //.................................alert Message........................................
 
-// document.getElementById('loginBtn').addEventListener('click', function(){
     function alertwindow(){
     Swal.fire({
         title: 'Login / Sign Up',
@@ -258,6 +257,18 @@ function delete_data(id){
 }
 
 
+
+// -----------------------------------------------
+
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+  });
 
 
 
