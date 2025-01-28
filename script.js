@@ -85,7 +85,7 @@ function inserted_data(){
      
   
 
-    let name= document.querySelector("#inputA").value;
+        let name= document.querySelector("#inputA").value;
     
         if(name.length<7){
           seterror("alertname" ,"*enter your full name" );
@@ -125,7 +125,7 @@ function inserted_data(){
   monumber:document.getElementById("inputB").value,
   age:document.getElementById("inputC").value,
   date:document.getElementById("inputD").value,
-  slot:document.getElementById("slot123").value,
+  slot:document.getElementById("slot123").value
 
    } ;
 
